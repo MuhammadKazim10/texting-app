@@ -17,6 +17,7 @@ const MainPage = () => {
       .post("http://localhost:5000/login", data)
       .then((res) => {
         const token = res.data.token;
+        console.log(token);
         sessionStorage.setItem("token", token);
         navigate("/home");
       })
